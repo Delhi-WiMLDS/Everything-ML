@@ -16,9 +16,10 @@ import numpy as np
 
 
 #Load data 
-iris = load_breast_cancer()
-X = iris.data
-Y = iris.target
+
+loadedData = load_breast_cancer()
+X = loadedData.data
+Y = loadedData.target
 
 #Split data in training and testing set 
 X_fit, X_eval, y_fit, y_test= model_selection.train_test_split( X, Y, test_size=0.20, random_state=1 )
